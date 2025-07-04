@@ -1,6 +1,5 @@
 package com.draysams.patientservice.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.draysams.patientservice.dto.PatientRequestDTO;
