@@ -1,0 +1,5 @@
+### GET request to get all patients
+GET https://examples.http-client.intellij.net/get
+    ?generated-in=IntelliJ IDEA
+
+###
