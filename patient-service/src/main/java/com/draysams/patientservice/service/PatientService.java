@@ -3,6 +3,7 @@ package com.draysams.patientservice.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.draysams.patientservice.dto.PatientRequestDTO;
 import com.draysams.patientservice.dto.PatientResponseDTO;
 import com.draysams.patientservice.mapper.PatientMapper;
 import com.draysams.patientservice.model.Patient;
@@ -23,5 +24,11 @@ public class PatientService {
 		
 		return patients.stream().map(PatientMapper::toDTO).toList();
 		
+	}
+	
+	public PatientResponseDTO createPatient(PatientRequestDTO patientRequestDTO) {
+		Patient newPatient = patientRepository.save(PatientMapper.toModel(patientRequestDTO));
+	
+		return PatientMapper.toDTO(newPatient);
 	}
 }
